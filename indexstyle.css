@@ -245,10 +245,58 @@ form.contact-form {
   background-color: #407FC7;
 }
 
+@media screen and (min-width: 1024px) {
+  .menu-button, 
+  .menu-button-checkbox {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   /*手機版的 css 都寫在這邊*/ 
   .container {
     width: auto;
+  }
+
+  .menu-button {
+    float: right;
+    font-size: 25px;
+    line-height: 40px;
+    color: white;
+    background: transparent;
+    padding:0 15px;
+    border: 0;
+  }
+
+  .menu-button-checkbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 40px;
+    opacity: 0;
+  }
+
+  .menu-button-checkbox:check ~ .menu {
+    display: block;
+  }
+  /*當 .menu-button-checkbox 狀態為 checked 時，選擇在同階層後面的 .menu 元素 */
+
+  .menu {
+    display: none;
+    margin-top: 0;
+    padding-left: 0;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    width: 150px;
+    height: 100%;
+    background: red;
+  }
+
+  .menu li {
+    border: 0;
+    border-radius: 0;
   }
 }
 
