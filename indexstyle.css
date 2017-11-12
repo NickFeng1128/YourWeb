@@ -277,7 +277,7 @@ form.contact-form {
     opacity: 0;
   }
 
-  .menu-button-checkbox:check ~ .menu {
+  .menu-button-checkbox:checked ~ .menu {
     display: block;
   }
   /*當 .menu-button-checkbox 狀態為 checked 時，選擇在同階層後面的 .menu 元素 */
